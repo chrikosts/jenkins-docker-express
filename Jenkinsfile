@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building image...'
-                bat 'docker build -t chrikosts/hello:v1.0 .'
+                sh 'docker build -t chrikosts/hello:v1.0 .'
             }
         }
 
@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Running docker container...'
                 // Run the Docker container
-                bat 'docker container run -d --name hello -p 8000:3000 chrikosts/hello:v1.0'
+                sh 'docker container run -d --name hello -p 8000:3000 chrikosts/hello:v1.0'
             }
         }
     }
