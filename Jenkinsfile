@@ -1,4 +1,4 @@
-peline {
+pipeline {
     agent {label "windows"}
     stages {
         stage('Build') {
