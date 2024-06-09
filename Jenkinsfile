@@ -7,7 +7,6 @@ pipeline {
                 sh 'docker build -t chrikosts/hello:v1.0 .'
             }
         }
-
         stage('Deploy app') {
             steps {
                 echo 'Deploying containerized app...'
