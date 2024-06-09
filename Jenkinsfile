@@ -8,9 +8,9 @@ pipeline {
             }
         }
 
-        stage('Run') {
+        stage('Deploy app') {
             steps {
-                echo 'Running docker container...'
+                echo 'Deploying containerized app...'
                 // Run the Docker container
                 sh 'docker container run -d --name hello -p 8000:3000 chrikosts/hello:v1.0'
             }
